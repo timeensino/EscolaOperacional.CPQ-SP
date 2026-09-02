@@ -196,13 +196,69 @@ h1 {
       margin-right: 10px;
     }
 
-    @media(max-width:900px) {
+@media (max-width: 900px) {
 
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
+  /* Impede rolagem lateral */
+  body {
+    overflow-x: hidden;
+  }
 
-    }
+  /* Capa: transforma as duas colunas em uma */
+  .capa-grid {
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+  }
+
+  /* Formulário: uma coluna no celular */
+  .form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Coluna esquerda */
+  .mensagem-coluna {
+    width: 100%;
+    flex: none;
+    box-sizing: border-box;
+  }
+
+  /* Coluna direita */
+  .form-direita {
+    width: 100%;
+    flex: none;
+    box-sizing: border-box;
+  }
+
+  /* Campos do formulário */
+  .form-direita input,
+  .form-direita select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Caixa de informações */
+  .mensagem {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    font-size: 18px;
+  }
+
+  /* Título da mensagem */
+  .mensagem h2 {
+    font-size: 27px !important;
+  }
+
+  /* Perguntas */
+  h3 {
+    font-size: 17px;
+  }
+
+}
 
   </style>
 
@@ -221,13 +277,13 @@ h1 {
 ">
 
   <!-- ÁREA PRINCIPAL -->
-  <div style="
-    display:grid;
-    grid-template-columns:0.9fr 1.1fr;
-    gap:50px;
-    align-items:center;
-    width:100%;
-  ">
+ <div class="capa-grid" style="
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:50px;
+  align-items:center;
+  width:100%;
+">
 
     <!-- ESQUERDA: LOGO + TÍTULO -->
     <div style="
