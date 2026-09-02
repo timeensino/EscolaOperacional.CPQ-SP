@@ -15,9 +15,9 @@
 
 body {
   font-family: Verdana, sans-serif;
-  background: #FFE8CC;
+  background: #14532D;
 }
-.logo-Koni {
+.logo-CPQ {
 
   position: fixed;
 
@@ -210,97 +210,153 @@ h1 {
 
 <body>
 
-<div class="container" id="capaInicial">
-
-<div style="
-  text-align:center;
-  padding:20px 40px 5px;
+<div class="container" id="capaInicial" style="
+  min-height:calc(100vh - 60px);
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  margin:30px auto;
+  padding:35px 55px 35px;
 ">
-    <img
-      src="Logo Koni.png"
+
+  <!-- ÁREA PRINCIPAL -->
+  <div style="
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:50px;
+    align-items:center;
+    width:100%;
+  ">
+
+    <!-- ESQUERDA: LOGO + TÍTULO -->
+    <div style="
+      text-align:center;
+    ">
+
+      <img
+        src="Logo CPQ.png"
+        style="
+          width:280px;
+          margin-bottom:15px;
+        "
+      >
+
+      <h1 style="
+        font-size:52px;
+        font-weight:700;
+        color:#1f3c5c;
+        letter-spacing:-2px;
+        line-height:1.1;
+        margin:0;
+      ">
+        Escola Operacional
+        <br>
+
+        <span style="
+          color:#2E7D32;
+          font-size:38px;
+        ">
+          Casa do Pão de Queijo
+        </span>
+
+        <span style="
+          color:#1f3c5c;
+          font-size:38px;
+        ">
+          | 2026
+        </span>
+      </h1>
+
+    </div>
+
+
+    <!-- DIREITA: INFORMAÇÕES -->
+    <div style="
+      background:#f5f7fa;
+      padding:30px;
+      border-radius:22px;
+      box-shadow:0 8px 25px rgba(0,0,0,.07);
+      text-align:center;
+    ">
+
+<p style="
+  margin:0;
+  font-size:24px;
+  color:#1f3c5c;
+  font-weight:600;
+  line-height:1.4;
+">
+  ☕ Bem-vindo(a) à experiência da Escola Operacional
+  <span style="color:#2E7D32;">
+    Casa do Pão de Queijo
+  </span>.
+</p>
+
+<hr style="
+  border:none;
+  border-top:1px solid #dfe3e8;
+  margin:22px 0;
+">
+
+<p style="
+  margin:0;
+  font-size:20px;
+  color:#555;
+  line-height:1.6;
+">
+  Desenvolvendo colaboradores para fortalecer a operação
+  e elevar a excelência em cada restaurante.
+</p>
+
+      <hr style="
+        border:none;
+        border-top:1px solid #dfe3e8;
+        margin:22px 0;
+      ">
+
+      <p style="
+        margin:0;
+        font-size:19px;
+        color:#555;
+        line-height:1.7;
+      ">
+        Uma jornada de aprendizado pensada para desenvolver
+        multiplicadores e elevar ainda mais o padrão de excelência
+        das nossas unidades da Casa do Pão de Queijo.
+        <br><br>
+
+        <strong>
+          Inscreva-se e participe do treinamento.
+        </strong>
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- BOTÃO CENTRAL -->
+  <div style="
+    text-align:center;
+    margin-top:30px;
+  ">
+
+    <button
+      onclick="iniciarFormulario()"
       style="
-        width:260px;
-        margin-bottom:15px;
+        background:#14532D;
+        color:white;
+        border:none;
+        padding:16px 50px;
+        border-radius:15px;
+        font-size:20px;
+        font-weight:bold;
+        cursor:pointer;
+        box-shadow:0 10px 30px rgba(20,83,45,.30);
+        transition:.3s;
       "
     >
-
- <h1 style="
-  font-size:68px;
-  font-weight:700;
-  color:#1f3c5c;
-  letter-spacing:-2px;
-  line-height:1.1;
-  margin-bottom:35px;
-">
-      Escola Operacional 2026
-    </h1>
-<div style="
-max-width:900px;
-margin:40px auto 50px;
-background:white;
-padding:40px;
-border-radius:25px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-text-align:center;
-">
-
-    <p style="
-    margin:0;
-    font-size:22px;
-    color:#666;
-    line-height:1.7;
-    ">
-        Desenvolvendo colaboradores para fortalecer a operação e elevar a excelência em cada restaurante.
-    </p>
-
-    <hr style="
-    border:none;
-    border-top:1px solid #ececec;
-    margin:30px 0;
-    ">
-
-    <p style="
-    margin:0;
-    font-size:28px;
-    color:#1f3c5c;
-    font-weight:600;
-    ">
-        🍜 Bem-vindo(a) à experiência da Escola Operacional Koni.
-    </p>
-
-    <hr style="
-    border:none;
-    border-top:1px solid #ececec;
-    margin:30px 0;
-    ">
-
-    <p style="
-    margin:0;
-    font-size:22px;
-    color:#555;
-    line-height:1.8;
-    ">
-        Uma jornada de aprendizado pensada para desenvolver multiplicadores e elevar ainda mais o padrão de excelência dos restaurantes Koni. Inscreva-se e participe do treinamento.
-    </p>
-
-</div>
-
- <button
-  onclick="iniciarFormulario()"
-  style="
-    margin-top:50px;
-    background:#E86A17;
-    color:white;
-    border:none;
-    padding:20px 50px;
-    border-radius:15px;
-    font-size:22px;
-    font-weight:bold;
-    cursor:pointer;
-    box-shadow:0 10px 30px rgba(232,106,23,.30);
-    transition:.3s;
-  "
->
       Iniciar inscrição
     </button>
 
@@ -308,8 +364,7 @@ text-align:center;
 
 </div>
 
-<div id="termo1" style="display:none;">
-
+<div id="termo1" style="display:none; background:#EAF5EC; min-height:100vh; padding-top:30px;">
   <div style="text-align:center;">
 
     <h1 style="
@@ -371,20 +426,25 @@ gestão e organização do evento.
 
   </div>
 
-  <div id="termo2" style="display:none;">
+  <div id="termo2" style="display:none; background:#EAF5EC; min-height:100vh; padding-top:30px;">
 
-    <h1>
-<p style="
-font-size:22px;
-color:#666;
-text-align:center;
-margin-top:-10px;
-margin-bottom:35px;
+<h1 style="
+  text-align:center;
+  color:#1f3c5c;
+  font-size:38px;
+  margin:0 0 10px;
+  font-family:'Noto Serif JP', serif;
 ">
-Leia atentamente as condições para participação no evento.
-</p>
+</h1>
 
-    <div class="termo-box">
+<p style="
+  font-size:18px;
+  color:#666;
+  text-align:center;
+  margin:0 auto 30px;
+  line-height:1.6;
+">
+     <div class="termo-box">
 
 <h3 style="
 margin-top:0;
@@ -419,7 +479,7 @@ A participação no evento implica concordância com as regras de hospedagem, al
 
   </div>
 
-  <div class="formulario" id="formulario">
+  <div class="formulario" id="formulario" style="background:#EAF5EC; min-height:100vh;">
 
     <div class="form-grid">
 
@@ -428,13 +488,28 @@ A participação no evento implica concordância com as regras de hospedagem, al
 
 <div class="mensagem">
 
-  <h2 style="
-    color:#1f3c5c;
-    font-size:32px;
-    margin-bottom:25px;
+<h2 style="
+  color:#1f3c5c;
+  font-size:32px;
+  margin-bottom:25px;
+  text-align:center;
+  line-height:1.2;
+">
+  ☕ Escola Operacional
+  <br>
+  <span style="
+    color:#2E7D32;
+    font-size:26px;
   ">
-    🍜 Escola Operacional Koni 2026
-  </h2>
+    Casa do Pão de Queijo
+  </span>
+  <span style="
+    color:#1f3c5c;
+    font-size:26px;
+  ">
+    | 2026
+  </span>
+</h2>
 
   <div style="
     background:#f5f7fa;
@@ -448,30 +523,54 @@ A participação no evento implica concordância com as regras de hospedagem, al
       line-height:1.8;
       margin:0;
     ">
-Participe da Escola Operacional Koni e descubra os novos sabores do Festival 
-de Pokes! Aprenda o preparo dos novos pratos que farão parte do nosso cardápio e esteja   
-pronto para oferecer essa novidade aos clientes.
-      
-    </p>
+      <strong style="font-size:18px;">
+        Objetivo do Escola Operacional.
+      </strong>
+
+      <p style="
+        margin-top:10px;
+        font-size:18px;
+        line-height:1.7;
+      ">
+Fortalecer o conhecimento dos operadores sobre a cultura do Grupo Trigo, os aspectos estratégicos que orientam a evolução dos produtos do cardápio e as técnicas de preparo de café, vendas e atendimento ao cliente, promovendo maior engajamento, excelência operacional e melhores experiências para os clientes.
+      </p>
+    </div>
+
   </div>
 
-  <div style="
-    border-left:5px solid #2e7d32;
-    padding-left:18px;
-    margin-bottom:28px;
+<div style="
+  background:#EAF5EC;
+  border:2px solid #2E7D32;
+  border-radius:18px;
+  padding:22px 25px;
+  margin-top:25px;
+  margin-bottom:25px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+">
+
+  <h3 style="
+    margin:0 0 10px;
+    padding:0;
+    background:none;
+    border:none;
+    color:#D62828;
+    font-size:24px;
+    font-weight:bold;
   ">
+    📌 Importante!
+  </h3>
 
-    <p style="
-      font-size:22px;
-      font-weight:bold;
-      margin:0;
-      line-height:1.6;
-    ">
-      Uma vaga por restaurante para o colaborador que 
-      irá compartilhar conhecimentos e boas práticas na unidade.
-    </p>
+<p style="
+  margin:0;
+  font-size:18px;
+  line-height:1.7;
+  color:#333;
+  font-weight:bold;
+">
+  Uma vaga por restaurante para o colaborador que irá compartilhar conhecimentos e boas práticas na unidade.
+</p>
 
-  </div>
+</div>
 
   <div style="
     display:flex;
@@ -496,8 +595,7 @@ pronto para oferecer essa novidade aos clientes.
       ">
         Cozinha Escola SP<br>
         Rua Fernandes Moreira, 1472<br>
-        Chácara Santo Antônio
-      </p>
+        Chácara Santo Antônio      </p>
     </div>
 
     <div style="
@@ -558,7 +656,7 @@ pronto para oferecer essa novidade aos clientes.
       margin:0;
       line-height:1.6;
     ">
-       Inscrições abertas até 31 de julho<br>
+       Inscrições abertas até 15 de setembro<br>
        Vagas limitadas: 30 participantes
     </p>
 
@@ -598,7 +696,7 @@ oninput="this.value=this.value.replace(/\D/g,'')"
   oninput="this.value=this.value.replace(/\D/g,'')"
 >
 
-<input type="text" id="marca" value="KONI" readonly>
+<input type="text" id="marca" value="CASA DO PÃO DE QUEIJO" readonly>
 
         <input
   list="listaRestaurantes"
@@ -608,160 +706,1122 @@ oninput="this.value=this.value.replace(/\D/g,'')"
 
 <datalist id="listaRestaurantes">
 
-<option
-  value="KONI AGUAS CLARAS"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<!-- T1 - 13/10 e 14/10 -->
+
+<option 
+  value="CPQ - AER FOZ DO IGUACU EM" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI POSTO ALTANA"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AER FOZ IGUACU PRACA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI ASA NORTE"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AEROP LONDRINA EMB" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI ASA SUL"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - POSTO SHELL MARINGA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI BOULEVARD NORTE"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AEROPORTO CURITIBA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI BRASILIA SHOPPING"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AEROP CURITIBA EMB 1" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI CONJUNTO NACIONAL DF"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AEROP CURITIBA EMB 2" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI GUARA"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AEROPORTO PELOTAS" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI LAGO SUL MM"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ AEROPORTO PORTO ALEGRE EMBARQUE DOMESTICO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI NOROESTE"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ AEROPORTO PORTO ALEGRE EMBARQUE PIER" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI NOVO SUDOESTE"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ AEROPORTO PORTO ALEGRE INTERNACIONAL CHECKIN" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI TAGUATINGA PISTÃO SUL"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ AEROPORTO PORTO ALEGRE MARKET PLACE" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI SHOPPING QUE GAMA"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - SHOPPING IGUATEMI PORTO ALEGRE" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI TAGUATINGA SHOPPING"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AEROPORTO URUGUAIANA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI GOIÂNIA"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AEROP FLORI EMB DOM" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI DOURADOS MS"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AER FLORIAN EMB INTE" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI SINOP MT"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - SHOPPINGPING ITAJAI" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI COLINAS"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AEROP NAVEGANTES EMB" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI CONTINENTAL OSASCO DK"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AER NAVEGANTES PRACA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI DIADEMA"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ BOAVISTA SHOPPING" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI POMPÉIA MM"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - AER CONGONHAS DESEMB" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI RIBEIRAO PRETO"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - ARMARINHO FERNANDO II MOOCA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI RIBEIRAO SHOPPING"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - ARMARINHOS FERNANDO TATUAPE" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI DK SANTANA SHOPPING"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - CAFETERIA VILLAGIO PANAMBY" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI VALE SUL"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - CASA DI ROMA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
 </option>
 
-<option
-  value="KONI BARUERI DK"
-  data-turma="T2"
-  data-data="25/08 e 26/08">
+<option 
+  value="CPQ - CCS VERBO DIVINO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - CLUBE SAO PAULO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="COLÉGIO PIO XII" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - FACULDADE SENAC" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - GALERIA GEMINI" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - GALERIA METROPOLE" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - HIPER ANDORINHA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSPITAL ALBERT SABIN" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ HOSPITAL NOVE DE JULHO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSP. OSWALDO CRUZ 13 DE MAIO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSPITAL PAULISTANO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSP PEROLA BYINGTON" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ HOSPITAL SEPACO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSPITAL TORRE ITAICI" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ HOSPITAL VILLA LOBOS" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - HSANP" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - LAPA 01" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - MACKENZIE" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - MED CENTER ITACOLOMI" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - METRO STA.CRUZ" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - POSTO SHELL SAUDE" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - RUA DA MOOCA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - RUA TUIM" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SALOMAO ZOPPI PARAISO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING AN FRANCO UCI" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING BOURBOM POMPEIA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING CIDADE JARDIM" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING LESTE ARICANDUVA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING METRO TATUAPE" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING MOOCA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING MORUMBI" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING TIETE PLAZA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING WEST PLAZA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPINGPING BOA VISTA SP" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - TERMINAL BARRA FUNDA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - TERMINAL BARRA FUNDA  LJ2 GR" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - TERMINAL JABAQUARA" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ TERMINAL RODOVIARIO TIETE  DESEMBARQUE" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ TERMINAL RODOVIARIO TIETE  MEZANINO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ TERMINAL RODOVIARIO TIETE AQUARIO" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+<option 
+  value="CPQ - TORRE GRSA DROGASIL" 
+  data-turma="T1" 
+  data-data="13/10 e 14/10"> 
+</option>
+
+
+<!-- T2 - 15/10 e 16/10 -->
+
+<option 
+  value="CPQ - SHOPPING PRAIA COSTA 2" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING VITORIA" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ HOSPITAL MATER DEI CONTORNO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ HOSPITAL MATER DEI SANTO AGOSTINHO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ HOSPITAL MATER DEI BETIM" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - AER CONFINS EMBARQUE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - C MEDICO MONTE SINAI" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - AER UBERLANDIA EMB" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - POSTO OLA RESENDE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - AER GALEAO EMB TPS1" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - AEROP GALEAO TPS2 DE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - AEROP GALEAO TPS2 EM" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - CARREF. BARRA LOJA" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - CARREF. BARRA QUIOSQUE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - GALEAO SAZONAL" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="Loja de Treinamento CPQ" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - POSTO SHELL RECREIO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - PROJAC" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING CITTA AMER.BARR" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING GAVEA" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING TIJUCA 1" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - TERMINAL RODOVIÁRIO VIA RIO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ TERM ROD NOVO RIO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - AER VIRACOPOS PIER C" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - CAMPINAS 8" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ CDS HOSP VERA CRUZ" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSP. SANTA TEREZA" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSPITAL VERA CRUZ" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ TERMINAL RODOVIARIO CAMPINAS EMBARQUE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ TERMINAL RODOVIARIO CAMPINAS MEZANINO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO GUARULHOS DESEMBARQUE INTERNACIONAL" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO GUARULHOS EMBARQUE INTERNACIONAL" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO GUARULHOS EMBARQUE INTERNACIONAL CENTRAL" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO GUARULHOS EMBARQUE INTERNACIONAL CHECKIN" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO GUARULHOS EMBARQUE TERMINAL 1" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO GUARULHOS EMBARQUE TERMINAL 2" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - OUTLET S MARCAS GUAR" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - POSTO IPIRANGA ITAQUA I" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - POSTO IPIRANGA ITAQUA II" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - CARREF. JUNDIAI" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSP SINO BRASILEIRO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SBT" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING UNIAO OSASCO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ OFALTMO CARE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - AEROP RIBEIRAO PRETO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSP S. LUCAS RIBEIR" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSP SAO LUCAS CENTR" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - ARMARINHO FERNANDO SANTO ANDRÉ" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - CENTRO MED CATEQUESE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - GRAN PLAZA SHOPPING ABC" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ HOSPITAL CHRISTOVAO DA GAMA" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - MEMORIAL DO CEMITÉRIO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPINGPING GOLDEN SQUARE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPINGPING RIO PRETO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPINGPING CENTER VALLE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING CATARINA FASH LOJA 1" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING CATARINA FASH LOJA 2" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - CNA ITAPETININGA" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPINGPING TAUBATE" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING IGU ESPLAN SORO" 
+  data-turma="T2" 
+  data-data="15/10 e 16/10"> 
+</option>
+
+
+<!-- T3 - 21/10 e 22/10 -->
+
+<option 
+  value="CPQ - TORRE CEMITÉRIO FLORES DO PARQUE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - HOME CENTER CARAJAS" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - POSTO ESQUINA BR PIRÂMIDE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING PQ MACEIO" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPINGPING MACEIO" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - POSTO CANTINHO IPIRANGA MARAGOGI" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO MANAUS DESEMBARQUE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO MANAUS EMBARQUE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO MANAUS INTERNACIONAL" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - HIPER DB PONTA NEGRA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - CPQ POSTO BR MANAUS" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING CENTER AMAZONAS" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - BOUL. FEIRA SANTANA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPINGPING ITABUNA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AER SALVADOR DESEMB" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - GRAN HOTEL STELLA MARIS" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING BARRA SALVADOR" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING DA BAHIA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING SALVADOR NORTE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING CONQUISTA SUL" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AER FOR EMB DOM SAGU" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO FORTALEZA EMBARQUE INTERNACIONAL" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO FORTALEZA EMBARQUE LESTE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO FORTALEZA PRAÇA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - UNIVER. DE FORTALEZA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO BRASILIA PIER CENTRAL" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO BRASILIA PIER NORTE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO BRASILIA PIER SUL" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - CENTRO EMPRES CNC DF" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - GREEN TOWERS BRAS" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSP. ALVORADA BSB" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPINGPING TAGUATINGA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - TERMINAL BRASILIA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AEROP GOIANIA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO IMPERATRIZ" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AER SAO LUIS DESEMBA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO SAO LUIS EMB" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - POSTO SHELL SIDROLANDIA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - HOSPITAL TORRE DOS OLHOS TRES LAGOAS" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AER CUIABA EMBARQUE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AER CUIABA PRACA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING METROP ANANINDEUA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AEROPORTO BELEM" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING PARQUE BELEM" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO MARABA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AEROPORTO CARAJAS" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - PARAUAPEBAS CENTRO" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO RECIFE CHECKIN" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO RECIFE DESEMBARQUE NORTE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO RECIFE DESEMBARQUE SUL" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO RECIFE EMBARQUE INTERNACIONAL" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ AEROPORTO RECIFE EMBARQUE REMOTO" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AEROPORTO DE TERESINA EMBARQUE" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPINGPING RIO POTY" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - SHOPPING PORTO VELHO" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - GALERIA MEGAFARMA RR" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="POSTO CORNER SHELL SELECT CAFÉ PLUS PREMIUM" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ POSTO SHELL ARAGUAINA" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
+</option>
+
+<option 
+  value="CPQ - AER DE PALMAS LJ2 PR" 
+  data-turma="T3" 
+  data-data="21/10 e 22/10"> 
 </option>
 
 </datalist>
@@ -1008,7 +2068,7 @@ async function enviar() {
   };
 
   const url =
-  "https://script.google.com/macros/s/AKfycbxulvYHQjZkTTPLG9nEv_eqn1BaSN7Sc9rCuJVWhR6ueZuHAmx0g84zCqovtJBgr-4wjw/exec";
+  "https://script.google.com/macros/s/AKfycbwoi-JcHKq2-8yG1zgLjgxuzIYmR3FL3DtvUuTJIYDpqbnyl2Rf1z8SZ5tvAyNcK9Lx/exec";
 
   try {
 
@@ -1050,7 +2110,7 @@ await fetch(url, {
       ">
 
         <img
-          src="Logo Koni.png"
+          src="Logo CPQ.png"
           style="width:300px; margin-bottom:5px;"
         >
 
@@ -1089,8 +2149,8 @@ da equipe de Ensino.        </p>
   <br><br>
   ${dataParticipacao}
   <br><br>
-  📍 Local: Cozinha Escola SP.<br> 
-     Rua Fernandes Moreira, 1472
+  📍 Local: Cozinha Escola - SP<br> 
+     Rua Fernandes Moreira, 1472<br>
      Chácara Santo Antônio.
 </div>
       </div>
