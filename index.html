@@ -198,64 +198,211 @@ h1 {
 
 @media (max-width: 900px) {
 
-  /* Impede rolagem lateral */
+  /* =========================
+     AJUSTES GERAIS DO CELULAR
+     ========================= */
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
   body {
-    overflow-x: hidden;
-  }
-
-  /* Capa: transforma as duas colunas em uma */
-  .capa-grid {
-    grid-template-columns: 1fr !important;
-    gap: 25px !important;
-  }
-
-  /* Formulário: uma coluna no celular */
-  .form-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Coluna esquerda */
-  .mensagem-coluna {
-    width: 100%;
-    flex: none;
-    box-sizing: border-box;
-  }
-
-  /* Coluna direita */
-  .form-direita {
-    width: 100%;
-    flex: none;
-    box-sizing: border-box;
-  }
-
-  /* Campos do formulário */
-  .form-direita input,
-  .form-direita select {
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+
+  /* =========================
+     CAPA INICIAL
+     ========================= */
+
+  #capaInicial {
+    width: calc(100% - 20px) !important;
+    max-width: 100% !important;
+    min-height: calc(100vh - 20px) !important;
+
+    margin: 10px auto !important;
+
+    padding: 25px 18px 30px !important;
+
+    border-radius: 22px !important;
+
+    overflow: hidden;
+  }
+
+
+  /* Capa passa para uma coluna */
+
+  #capaInicial .capa-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+
+    gap: 25px !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 auto !important;
+  }
+
+
+  /* Impede qualquer coluna de estourar a tela */
+
+  #capaInicial .capa-grid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
     box-sizing: border-box;
   }
 
-  /* Caixa de informações */
+
+  /* =========================
+     LOGO
+     ========================= */
+
+  #capaInicial .capa-grid img {
+    width: 190px !important;
+    max-width: 80% !important;
+    height: auto !important;
+
+    margin-bottom: 12px !important;
+  }
+
+
+  /* =========================
+     TÍTULO PRINCIPAL
+     ========================= */
+
+  #capaInicial h1 {
+    font-size: 38px !important;
+    line-height: 1.05 !important;
+
+    letter-spacing: -1px !important;
+
+    margin: 0 !important;
+
+    text-align: center !important;
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* Casa do Pão de Queijo */
+
+  #capaInicial h1 span {
+    font-size: 27px !important;
+    line-height: 1.15 !important;
+  }
+
+
+  /* =========================
+     CAIXA DE INFORMAÇÕES
+     ========================= */
+
+  #capaInicial .capa-grid > div:last-child {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding: 22px 18px !important;
+
+    border-radius: 18px !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Bem-vindo */
+
+  #capaInicial .capa-grid > div:last-child p:first-child {
+    font-size: 19px !important;
+    line-height: 1.4 !important;
+  }
+
+
+  /* Textos da caixa */
+
+  #capaInicial .capa-grid > div:last-child p {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+
+  /* =========================
+     BOTÃO
+     ========================= */
+
+  #capaInicial button {
+    width: auto !important;
+    max-width: 100% !important;
+
+    padding: 14px 30px !important;
+
+    font-size: 17px !important;
+
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     FORMULÁRIO
+     ========================= */
+
+  .form-grid {
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 25px !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    box-sizing: border-box;
+  }
+
+
+  .mensagem-coluna,
+  .form-direita {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    flex: none !important;
+
+    box-sizing: border-box;
+  }
+
+
+  .form-direita input,
+  .form-direita select {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    box-sizing: border-box;
+  }
+
+
   .mensagem {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding: 22px !important;
+
+    font-size: 18px !important;
+
     box-sizing: border-box;
-    padding: 25px;
-    font-size: 18px;
   }
 
-  /* Título da mensagem */
+
   .mensagem h2 {
     font-size: 27px !important;
   }
 
-  /* Perguntas */
+
   h3 {
-    font-size: 17px;
+    font-size: 17px !important;
   }
 
 }
