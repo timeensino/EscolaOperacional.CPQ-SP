@@ -2097,6 +2097,7 @@ oninput="this.value=this.value.replace(/\D/g,'')"
   data-turma="T3" 
   data-data="21/10 e 22/10"> 
 </option>
+
 </datalist>
 
         <input type="email" id="email" placeholder="E-mail do restaurante">
@@ -2130,35 +2131,37 @@ oninput="this.value=this.value.replace(/\D/g,'')"
 function iniciarFormulario() {
 
   document
-  .getElementById("capaInicial")
-  .style.display = "none";
+    .getElementById("capaInicial")
+    .style.display = "none";
 
   document
-  .getElementById("termo1")
-  .style.display = "block";
+    .getElementById("termo1")
+    .style.display = "block";
 
 }
+
 
 function abrirTermo2() {
 
   document
-  .getElementById("termo1")
-  .style.display = "none";
+    .getElementById("termo1")
+    .style.display = "none";
 
   document
-  .getElementById("termo2")
-  .style.display = "block";
+    .getElementById("termo2")
+    .style.display = "block";
 
 }
+
 
 function abrirFormulario() {
 
   document
-  .getElementById("termo2")
-  .style.display = "none";
+    .getElementById("termo2")
+    .style.display = "none";
 
   const formulario =
-  document.getElementById("formulario");
+    document.getElementById("formulario");
 
   formulario.style.display = "block";
 
@@ -2168,46 +2171,66 @@ function abrirFormulario() {
 
 }
 
-  const restaurantes = {};
 
-  const opcoes =
+/* =========================
+   RESTAURANTES
+   ========================= */
+
+const restaurantes = {};
+
+const opcoes =
   document.querySelectorAll("#listaRestaurantes option");
 
-  opcoes.forEach(opcao => {
 
-    const nome = opcao.value;
+opcoes.forEach(opcao => {
 
-restaurantes[nome] = {
+  const nome = opcao.value;
 
-  turma: opcao.dataset.turma || "",
+  restaurantes[nome] = {
 
-  data: opcao.dataset.data || ""
+    turma:
+      opcao.dataset.turma || "",
 
-};
+    data:
+      opcao.dataset.data || ""
 
-  });
+  };
 
-  const restauranteInput =
+});
+
+
+const restauranteInput =
   document.getElementById("restaurante");
 
-  restauranteInput.addEventListener("change", preencherDados);
 
-  restauranteInput.addEventListener("input", preencherDados);
+restauranteInput.addEventListener(
+  "change",
+  preencherDados
+);
+
+
+restauranteInput.addEventListener(
+  "input",
+  preencherDados
+);
+
 
 function preencherDados() {
 
   const restaurante =
-  restauranteInput.value.trim();
+    restauranteInput.value.trim();
 
-  const info = restaurantes[restaurante];
+  const info =
+    restaurantes[restaurante];
+
 
   if (info) {
 
     document.getElementById("turma").value =
-    info.turma;
+      info.turma;
 
     document.getElementById("datas").value =
-    info.data;
+      info.data;
 
   }
 
@@ -2221,41 +2244,49 @@ function preencherDados() {
 
 }
 
+
+/* =========================
+   ENVIO DA INSCRIÇÃO
+   ========================= */
+
 async function enviar() {
 
+
   const nome =
-  document.getElementById("nome").value.trim();
+    document.getElementById("nome").value.trim();
+
 
   const cpf =
-  document.getElementById("cpf").value.trim();
+    document.getElementById("cpf").value.trim();
+
 
   const nascimento =
-  document.getElementById("nascimento").value.trim();
+    document.getElementById("nascimento").value.trim();
+
 
   const celular =
-  document.getElementById("celular").value.trim();
+    document.getElementById("celular").value.trim();
+
 
   const restaurante =
-  document.getElementById("restaurante").value.trim();
+    document.getElementById("restaurante").value.trim();
+
 
   const email =
-  document.getElementById("email").value.trim();
+    document.getElementById("email").value.trim();
+
 
   const turma =
-  document.getElementById("turma").value.trim();
+    document.getElementById("turma").value.trim();
+
 
   const datas =
-  document.getElementById("datas").value.trim();
+    document.getElementById("datas").value.trim();
 
-  const hospedagem =
-  document.querySelector(
-    'input[name="hospedagem"]:checked'
-  );
 
-  const genero =
-  document.querySelector(
-    'input[name="genero"]:checked'
-  );
+  /* =========================
+     VALIDAÇÃO
+     ========================= */
 
   if (
     !nome ||
@@ -2265,40 +2296,42 @@ async function enviar() {
     !restaurante ||
     !email ||
     !turma ||
-    !datas ||
-    !hospedagem ||
-    !genero
+    !datas
   ) {
 
     alert(
-      "Por favor, preencha todos os campos e selecione todas as opções antes de enviar."
+      "Por favor, preencha todos os campos antes de enviar."
     );
 
     return;
+
   }
 
+
   const dataParticipacao = datas;
+
+
+  /* =========================
+     DADOS ENVIADOS
+     ========================= */
 
   const dadosEnviar = {
 
     nome: nome,
 
-    cpf: cpf.replace(/\D/g,''),
+    cpf:
+      cpf.replace(/\D/g, ''),
 
     nascimento: nascimento,
 
     celular: celular,
 
     marca:
-    document.getElementById("marca").value,
+      document.getElementById("marca").value,
 
     restaurante: restaurante,
 
     email: email,
-
-    hospedagem: hospedagem.value,
-
-    genero: genero.value,
 
     turma: turma,
 
@@ -2306,97 +2339,136 @@ async function enviar() {
 
   };
 
+
+  /* =========================
+     GOOGLE APPS SCRIPT
+     ========================= */
+
   const url =
-  "https://script.google.com/macros/s/AKfycbzbg3taSu9mCYNaduBp-tTKoQVgKpgMnuTRWMdkhpwTLi8iNIB3_CDSYPvm98If37fB/exec";
+    "https://script.google.com/macros/s/AKfycbwoi-JcHKq2-8yG1zgLjgxuzIYmR3FL3DtvUuTJIYDpqbnyl2Rf1z8SZ5tvAyNcK9Lx/exec";
+
 
   try {
 
-await fetch(url, {
 
-  method: "POST",
+    await fetch(url, {
 
-  mode: "no-cors",
+      method: "POST",
 
-  headers: {
-    "Content-Type": "application/json"
-  },
+      mode: "no-cors",
 
-  body:
-  JSON.stringify(dadosEnviar)
+      headers: {
 
-});
+        "Content-Type":
+          "application/json"
+
+      },
+
+      body:
+        JSON.stringify(dadosEnviar)
+
+    });
+
+
+    /* =========================
+       TELA DE SUCESSO
+       ========================= */
 
     document.body.innerHTML = `
 
-    <div style="
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      background:#f4f6f8;
-      font-family:Verdana,sans-serif;
-      padding:30px;
-    ">
-
       <div style="
-        background:white;
-        max-width:700px;
-        width:100%;
-        border-radius:25px;
-        padding:60px;
-        box-shadow:0 0 25px rgba(0,0,0,0.08);
-        text-align:center;
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:#f4f6f8;
+        font-family:Verdana,sans-serif;
+        padding:30px;
       ">
 
-        <img
-          src="Logo CPQ.png"
-          style="width:300px; margin-bottom:5px;"
-        >
-
-        <h1 style="
-          color:#2e7d32;
-          font-size:42px;
-          margin-bottom:10px;
-        ">
-          🎉 Inscrição realizada!
-        </h1>
-
-        <p style="
-          font-size:22px;
-          line-height:1.8;
-          color:#333;
-        ">
-          Parabéns,
-          <strong>${nome}</strong>!
-          <br><br>
-Sua inscrição foi confirmada com sucesso.
-
-Anote sua data de participação
-e aguarde futuras orientações
-da equipe de Ensino.        </p>
-
         <div style="
-          margin-top:35px;
-          background:#eef5ff;
-          padding:25px;
-          border-radius:18px;
-          font-size:22px;
-          color:#1f3c5c;
-          font-weight:bold;
-">
-  📅 Sua participação será em:
-  <br><br>
-  ${dataParticipacao}
-  <br><br>
-  📍 Local: Cozinha Escola - SP<br> 
-     Rua Fernandes Moreira, 1472<br>
-     Chácara Santo Antônio.
-</div>
+          background:white;
+          max-width:700px;
+          width:100%;
+          border-radius:25px;
+          padding:60px;
+          box-shadow:0 0 25px rgba(0,0,0,0.08);
+          text-align:center;
+        ">
+
+          <img
+            src="Logo CPQ.png"
+            style="width:300px; margin-bottom:5px;"
+          >
+
+          <h1 style="
+            color:#2e7d32;
+            font-size:42px;
+            margin-bottom:10px;
+          ">
+            🎉 Inscrição realizada!
+          </h1>
+
+
+          <p style="
+            font-size:22px;
+            line-height:1.8;
+            color:#333;
+          ">
+
+            Parabéns,
+            <strong>${nome}</strong>!
+
+            <br><br>
+
+            Sua inscrição foi confirmada com sucesso.
+
+            <br><br>
+
+            Anote sua data de participação
+            e aguarde futuras orientações
+            da equipe de Ensino.
+
+          </p>
+
+
+          <div style="
+            margin-top:35px;
+            background:#eef5ff;
+            padding:25px;
+            border-radius:18px;
+            font-size:22px;
+            color:#1f3c5c;
+            font-weight:bold;
+          ">
+
+            📅 Sua participação será em:
+
+            <br><br>
+
+            ${dataParticipacao}
+
+            <br><br>
+
+            📍 Local: Cozinha Escola - SP
+
+            <br><br>
+
+            Rua Fernandes Moreira, 1472
+
+            <br>
+
+            Chácara Santo Antônio.
+
+          </div>
+
+
+        </div>
+
       </div>
 
-    </div>
-
     `;
+
 
   }
 
@@ -2413,7 +2485,6 @@ da equipe de Ensino.        </p>
 }
 
 </script>
-
 
 </body>
 </html>
