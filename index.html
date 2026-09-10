@@ -103,7 +103,7 @@ h1 {
       margin-top: 40px;
     }
 
-    .form-grid {
+.form-grid {
 
   display: flex;
   gap: 50px;
@@ -112,6 +112,151 @@ h1 {
 
 }
 
+
+/* =========================
+   NOVO LAYOUT DO FORMULÁRIO
+   ========================= */
+
+.evento-topo {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.evento-titulo {
+  text-align: center;
+
+  /* Espaço entre o topo da página e o título */
+  margin-top: 35px;
+  margin-bottom: 30px;
+
+  /* Destaque do título */
+  background: #f8fbf9;
+  border: 2px solid #2E7D32;
+  border-radius: 22px;
+
+  padding: 22px 30px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.evento-titulo h2 {
+  color: #1f3c5c;
+  font-size: 36px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.evento-titulo .marca-evento {
+  color: #2E7D32;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.evento-titulo .ano-evento {
+  color: #1f3c5c;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.objetivo-evento {
+  background: #f5f7fa;
+  padding: 22px 28px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+
+.objetivo-evento strong {
+  font-size: 19px;
+}
+
+.objetivo-evento p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.info-evento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.info-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.info-card strong {
+  font-size: 18px;
+  color: #1f1f1f;
+}
+
+.info-card p {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.inscricao-area {
+  width: 100%;
+  background: #EAF5EC;
+  border-radius: 20px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.prazo-inscricao {
+  background: #fff3f3;
+  border: 2px solid #d62828;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.prazo-inscricao p {
+  color: #d62828;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 900px) {
+
+  .info-evento {
+    grid-template-columns: 1fr;
+  }
+
+  .evento-titulo h2 {
+    font-size: 30px;
+  }
+
+  .evento-titulo .marca-evento,
+  .evento-titulo .ano-evento {
+    font-size: 24px;
+  }
+
+  .objetivo-evento {
+    padding: 20px;
+  }
+
+  .info-card {
+    padding: 18px;
+  }
+
+  .inscricao-area {
+    padding: 15px;
+  }
+
+}
     .mensagem {
 
   background: #f8f9fa;
@@ -684,190 +829,119 @@ A participação no evento implica concordância com as regras de hospedagem, al
 
   <div class="formulario" id="formulario" style="background:#EAF5EC; min-height:100vh;">
 
-    <div class="form-grid">
+<!-- =========================
+     INFORMAÇÕES DO EVENTO
+     ========================= -->
 
-  <div class="mensagem-coluna">
+<div class="evento-topo">
 
+  <!-- TÍTULO -->
+  <div class="evento-titulo">
 
-<div class="mensagem">
+    <h2>
+      ☕ Escola Operacional
+    </h2>
 
-<h2 style="
-  color:#1f3c5c;
-  font-size:32px;
-  margin-bottom:25px;
-  text-align:center;
-  line-height:1.2;
-">
-  ☕ Escola Operacional
-  <br>
-  <span style="
-    color:#2E7D32;
-    font-size:26px;
-  ">
-    Casa do Pão de Queijo
-  </span>
-  <span style="
-    color:#1f3c5c;
-    font-size:26px;
-  ">
-    | 2026
-  </span>
-</h2>
-
-  <div style="
-    background:#f5f7fa;
-    padding:22px;
-    border-radius:16px;
-    margin-bottom:22px;
-  ">
-
-    <p style="
-      font-size:19px;
-      line-height:1.8;
-      margin:0;
-    ">
-      <strong style="font-size:18px;">
-        Objetivo do Escola Operacional.
-      </strong>
-
-      <p style="
-        margin-top:10px;
-        font-size:18px;
-        line-height:1.7;
-      ">
-Fortalecer o conhecimento dos operadores sobre a cultura do Grupo Trigo, os aspectos estratégicos que orientam a evolução dos produtos do cardápio e as técnicas de preparo de café, vendas e atendimento ao cliente, promovendo maior engajamento, excelência operacional e melhores experiências para os clientes.
-      </p>
+    <div class="marca-evento">
+      Casa do Pão de Queijo
+      <span class="ano-evento">| 2026</span>
     </div>
 
   </div>
 
-<div style="
-  background:#EAF5EC;
-  border:2px solid #2E7D32;
-  border-radius:18px;
-  padding:22px 25px;
-  margin-top:25px;
-  margin-bottom:25px;
-  box-shadow:0 6px 18px rgba(0,0,0,.06);
-">
 
-  <h3 style="
-    margin:0 0 10px;
-    padding:0;
-    background:none;
-    border:none;
-    color:#D62828;
-    font-size:24px;
-    font-weight:bold;
-  ">
-    📌 Importante!
-  </h3>
+  <!-- OBJETIVO -->
+  <div class="objetivo-evento">
 
-<p style="
-  margin:0;
-  font-size:18px;
-  line-height:1.7;
-  color:#333;
-  font-weight:bold;
-">
-  Uma vaga por restaurante para o colaborador que irá compartilhar conhecimentos e boas práticas na unidade.
-</p>
+    <strong>
+      Objetivo do Escola Operacional.
+    </strong>
 
-</div>
-
-  <div style="
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-  ">
-
-    <div style="
-      background:white;
-      border:1px solid #e5e7eb;
-      border-radius:16px;
-      padding:20px;
-    ">
-      <strong style="font-size:18px;">
-        📍 Local
-      </strong>
-
-      <p style="
-        margin-top:10px;
-        font-size:18px;
-        line-height:1.7;
-      ">
-        Cozinha Escola SP<br>
-        Rua Fernandes Moreira, 1472<br>
-        Chácara Santo Antônio      </p>
-    </div>
-
-    <div style="
-      background:white;
-      border:1px solid #e5e7eb;
-      border-radius:16px;
-      padding:20px;
-    ">
-      <strong style="font-size:18px;">
-         Custos do Restaurante
-      </strong>
-
-      <p style="
-        margin-top:10px;
-        font-size:18px;
-        line-height:1.7;
-      ">
-        Custos com deslocamento (aéreo, rodoviário, Uber e afins), 
-        jantar e itens do frigobar.
-      </p>
-    </div>
-
-    <div style="
-      background:white;
-      border:1px solid #e5e7eb;
-      border-radius:16px;
-      padding:20px;
-    ">
-      <strong style="font-size:18px;">
-         Custos cobertos pelo Fundo de Marketing
-      </strong>
-
-      <p style="
-        margin-top:10px;
-        font-size:18px;
-        line-height:1.7;
-      ">
-        Hospedagem, café da manhã, almoço e
-        coffe break são responsabilidade do Grupo Trigo.
-      </p>
-    </div>
-
-  </div>
-
-  <div style="
-    margin-top:28px;
-    background:#fff3f3;
-    border:2px solid #d62828;
-    border-radius:18px;
-    padding:22px;
-    text-align:center;
-  ">
-
-    <p style="
-      color:#d62828;
-      font-size:24px;
-      font-weight:bold;
-      margin:0;
-      line-height:1.6;
-    ">
-       Inscrições abertas até 15 de setembro<br>
-       Vagas limitadas: 30 participantes
+    <p>
+      Fortalecer o conhecimento dos operadores sobre a cultura do Grupo Trigo,
+      os aspectos estratégicos que orientam a evolução dos produtos do cardápio
+      e as técnicas de preparo de café, vendas e atendimento ao cliente,
+      promovendo maior engajamento, excelência operacional e melhores
+      experiências para os clientes.
     </p>
 
   </div>
 
+
+  <!-- TRÊS INFORMAÇÕES -->
+  <div class="info-evento">
+
+
+    <!-- LOCAL -->
+    <div class="info-card">
+
+      <strong>
+        📍 Local
+      </strong>
+
+      <p>
+        Cozinha Escola SP<br>
+        Rua Fernandes Moreira, 1472<br>
+        Chácara Santo Antônio
+      </p>
+
+    </div>
+
+
+    <!-- CUSTOS DO RESTAURANTE -->
+    <div class="info-card">
+
+      <strong>
+
+• Despesas do Restaurante
+      </strong>
+
+      <p>
+        Deslocamento (aéreo, rodoviário, Uber e afins), hospedagem e
+        jantar.
+      </p>
+
+    </div>
+
+
+    <!-- CUSTOS COBERTOS -->
+    <div class="info-card">
+
+      <strong>
+        ✓ Despesas do Grupo Trigo
+      </strong>
+
+      <p>
+         Almoço e coffee break.
+        
+      </p>
+
+    </div>
+
+  </div>
+
 </div>
 
-        <div class="form-direita">
+
+<!-- =========================
+     ÁREA DE INSCRIÇÃO
+     ========================= -->
+
+<div class="inscricao-area">
+
+
+  <!-- PRAZO -->
+  <div class="prazo-inscricao">
+
+    <p>
+      📅 Inscrições abertas até 17 de setembro
+      <br>
+      👥 Vagas limitadas: 30 participantes
+       <br>
+          • Uma vaga por restaurante.
+    </p>
+
+  </div>
 
 <input type="text" id="nome" placeholder="Nome completo">
 
@@ -2029,42 +2103,8 @@ oninput="this.value=this.value.replace(/\D/g,'')"
 
 </datalist>
 
-        <input type="email" id="email" placeholder="E-mail">
+        <input type="email" id="email" placeholder="E-mail do restaurante">
 
-        <div class="radio-group">
-
-          <h3>Você precisa de hospedagem?</h3>
-
-          <label>
-            <input type="radio" name="hospedagem" value="Sim">
-            Sim
-          </label>
-
-          <label>
-            <input type="radio" name="hospedagem" value="Não">
-            Não
-          </label>
-
-        </div>
-
-        <div class="radio-group">
-
-          <h3>
-            Para nos orientar quanto à divisão dos quartos,
-            qual a sua identidade de gênero?
-          </h3>
-
-          <label>
-            <input type="radio" name="genero" value="Feminino">
-            Feminino
-          </label>
-
-          <label>
-            <input type="radio" name="genero" value="Masculino">
-            Masculino
-          </label>
-
-        </div>
 
         <h3>Turma - São Paulo</h3>
 
